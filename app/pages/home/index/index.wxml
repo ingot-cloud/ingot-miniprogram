@@ -1,4 +1,5 @@
 <view>
+  <in-status-bar />
 home
 </view>
 <van-tabbar active="{{ tabActive }}" bind:change="onTabChange">
