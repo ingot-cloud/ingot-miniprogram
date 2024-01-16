@@ -3,6 +3,9 @@
     "pages/home/index/index",
     "pages/security/login/index"
   ],
+  "resolveAlias":{
+    "@/*": "/*"
+  },
   "window": {
     "navigationBarTextStyle": "black",
     "navigationStyle": "custom"
