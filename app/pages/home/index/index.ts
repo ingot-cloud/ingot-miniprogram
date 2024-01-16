@@ -1,11 +1,12 @@
-// pages/home/index/index.ts
+import Router from "../../../router/index"
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    tabActive: 0
+    tabActive: "0"
   },
 
   /**
@@ -13,6 +14,10 @@ Page({
    */
   onLoad() {
 
+  },
+
+  onLoginClick(){
+    Router.toLogin()
   },
 
   onTabChange(event: WechatMiniprogram.TouchEvent) {

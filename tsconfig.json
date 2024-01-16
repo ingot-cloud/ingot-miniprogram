@@ -21,7 +21,8 @@
       "./typings"
     ],
     "paths": {
-      "@vant/weapp/*": ["/node_modules/@vant/weapp/dist/*"]
+      "@vant/weapp/*": ["/node_modules/@vant/weapp/dist/*"],
+      "@/*": ["/app/*"]
     }
   },
   "include": [
