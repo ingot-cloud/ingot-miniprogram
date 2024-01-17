@@ -17,6 +17,10 @@
     "van-tabbar": "@vant/weapp/tabbar/index",
     "van-tabbar-item": "@vant/weapp/tabbar-item/index",
     "van-button": "@vant/weapp/button/index",
-    "in-status-bar": "./components/status-bar/index"
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "in-status-bar": "./components/status-bar/index",
+    "in-nav-bar": "./components/nav-bar/index",
+    "in-nav-container": "./components/nav-container/index"
   }
 }

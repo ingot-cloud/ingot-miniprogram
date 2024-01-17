@@ -1,6 +1,0 @@
-.function-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20rpx;
-  grid-gap: 20rpx;
-}

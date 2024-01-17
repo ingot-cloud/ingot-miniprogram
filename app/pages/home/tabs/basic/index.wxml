@@ -1,0 +1,5 @@
+<in-nav-container title="{{title}}">
+  <van-cell-group inset title="公共接口">
+    <van-cell is-link title="登录" link-type="navigateTo" url="/pages/security/login/index"></van-cell>
+  </van-cell-group>
+</in-nav-container>

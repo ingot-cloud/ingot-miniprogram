@@ -1,2 +1,3 @@
-<!--pages/security/login/index.wxml-->
-<text>pages/security/login/index.wxml</text>
+<in-nav-container title="{{title}}" border="{{false}}" leftArrow>
+
+</in-nav-container>
