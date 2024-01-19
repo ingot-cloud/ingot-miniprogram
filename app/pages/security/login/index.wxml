@@ -1,3 +1,7 @@
 <in-nav-container title="{{title}}" border="{{false}}" leftArrow>
   <van-cell is-link title="一键登录" bind:click="onAppLogin"></van-cell>
 </in-nav-container>
+
+<van-toast id="van-toast" />
+
+<van-action-sheet show="{{ showGetPhoneNumberActions }}" title="授权绑定手机号" actions="{{ getPhoneNumberActions }}" close-on-click-action="{{false}}" bind:close="onGetPhonNumberActionClose" bind:getphonenumber="onBindGetPhoneNumber" />

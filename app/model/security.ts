@@ -21,9 +21,11 @@ export interface UserInfo {
 
 export interface SocialRegisterDTO {
   type?: string;
-  phone?: string;
   code?: string;
-  smsCode?: string;
+  phone?: string;
+  avatar?:string;
+  nickname?:string;
+  phoneCode?: string;
 }
 
 export enum SocialTypeEnums {

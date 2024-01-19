@@ -1,5 +1,6 @@
-import { UserToken, UserInfo, User } from "@/model/index"
-import { MiniProgramLogin, RefreshToken } from "@/api/modules/common/auth"
+import { UserToken, UserInfo, User } from "@/model/security"
+import { MiniProgramLogin, RefreshToken, SocialRegister } from "@/api/modules/common/auth"
+import { UserInfoAPI } from "@/api/modules/common/user"
 
 class AuthStore {
 
@@ -56,6 +57,39 @@ class AuthStore {
       RefreshToken().then(response => {
         authStore.setUserToken(response.data)
         resolve(response.data)
+      }).catch(err => {
+        reject(err)
+      })
+    })
+  }
+
+  fetchUserInfo() {
+    return new Promise<UserInfo>((resolve, reject) => {
+      UserInfoAPI().then(response => {
+        this.setUserInfo(response.data)
+        resolve(response.data)
+      }).catch(err => {
+        reject(err)
+      })
+    })
+  }
+
+  fetchUserInfoIfLogin() {
+    if (!this.isLogin()) {
+      return
+    }
+    UserInfoAPI().then(response => {
+      this.setUserInfo(response.data)
+    })
+  }
+
+  doRegister({ phoneCode, code }: { phoneCode: string, code: string }) {
+    return new Promise<void>((resolve, reject) => {
+      SocialRegister({
+        phoneCode,
+        code,
+      }).then(() => {
+        resolve()
       }).catch(err => {
         reject(err)
       })

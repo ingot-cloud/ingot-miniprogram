@@ -13,8 +13,10 @@ export function MiniProgramLogin(code: string): Promise<R<UserToken>> {
     },
     data: {
       grant_type: "social",
-      socialType: "admin_miniprogram",
-      socialCode: code
+      social_type: "app_miniprogram",
+      social_code: code,
+      user_type: "1",
+      org: global.Tenant
     },
     manualProcessingFailure: true
   })
@@ -37,16 +39,9 @@ export function RefreshToken() {
 
 export function SocialRegister(params: SocialRegisterDTO) {
   return Http.post({
-    url: "/pms/mini/auth/register/social",
+    url: "/pms/v1/app/auth/register/social",
     data: params,
     permit: true,
     manualProcessingFailure: true
-  })
-}
-
-export function SendSms(phone:string) {
-  return Http.post({
-    url: `/pms/mini/auth/sendCode/${phone}`,
-    permit: true,
   })
 }

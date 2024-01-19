@@ -6,9 +6,9 @@ enum Env {
 
 export const global = {
   AppVersion: "v1.0.0",
-  Env: Env.Release,
+  Env: Env.CompanyDev,
   Tenant: "1",
-  BasicToken: "aW5nb3Q6aW5nb3Q=",
+  BasicToken: "aW4xMDg4MDk0Ojc4ZGZjNTEzN2IwYjQyOTU5MDkyYjUwNWU4MGNkZDhh",
   BaseUrl: (): string => {
     switch (global.Env) {
       case Env.CompanyDev:
