@@ -1,3 +1,3 @@
 <in-nav-container title="{{title}}" border="{{false}}" leftArrow>
-
+  <van-cell is-link title="一键登录" bind:click="onAppLogin"></van-cell>
 </in-nav-container>

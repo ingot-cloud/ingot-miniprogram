@@ -14,4 +14,11 @@ Page({
 
   },
 
+  /**
+   * 前台一键登录
+   */
+  onAppLogin() {
+    console.log("app login")
+  }
+
 })
