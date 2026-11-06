@@ -39,7 +39,7 @@ export function RefreshToken() {
 
 export function SocialRegister(params: SocialRegisterDTO) {
   return Http.post({
-    url: "/pms/v1/app/auth/register/social",
+    url: "/member/v1/app/auth/register/social",
     data: params,
     permit: true,
     manualProcessingFailure: true
